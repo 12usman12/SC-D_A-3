@@ -11,7 +11,8 @@ import javax.swing.JOptionPane;
  * @author VAIO
  */
 public class Doctor_details extends javax.swing.JFrame {
-
+ 
+        
     /**
      * Creates new form Doctor_details
      */
@@ -59,7 +60,6 @@ public class Doctor_details extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Doctor Details"));
 
         jLabel1.setText("Doctor ID");
@@ -219,6 +219,11 @@ public class Doctor_details extends javax.swing.JFrame {
         });
 
         Update.setText("Update");
+        Update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdateActionPerformed(evt);
+            }
+        });
 
         Delete.setText("Delete");
         Delete.addActionListener(new java.awt.event.ActionListener() {
@@ -321,14 +326,16 @@ public class Doctor_details extends javax.swing.JFrame {
         String doc_id = jTextField9.getText();
         String name =jTextField10.getText();
         String fath_name = jTextField12.getText();
-        String email = jTextField4.getText;()
+        String email = jTextField4.getText();
         String contact = jTextField13.getText();
         String add= jTextField6.getText();
         String qualif= jTextField7.getText();
         String gender = jComboBox1.getToolTipText();
         String blood = jComboBox2.getToolTipText();
         String joining=jTextField8.getText();
-        
+        Room_info frame=new Room_info();
+              frame.setVisible(true);
+              dispose();
     }//GEN-LAST:event_SaveActionPerformed
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
@@ -338,15 +345,15 @@ public class Doctor_details extends javax.swing.JFrame {
          if(k==1){
              JOptionPane.showMessageDialog(this, "Deleted successfully");
              jTextField9.setText("");
-             jTextField10.getText("");
-             jTextField12.getText("");
-             jTextField4.getText;("");
-             jTextField13.getText("");
-             jTextField6.getText("");
-             jTextField7.getText("");
-             jComboBox1.getToolTipText("");
-             jComboBox2.getToolTipText("");
-             jTextField8.getText("");
+//             jTextField10.getText("");
+//             jTextField12.getText("");
+//             jTextField4.getText;("");
+//             jTextField13.getText("");
+//             jTextField6.getText("");
+//             jTextField7.getText("");
+//             jComboBox1.getToolTipText("");
+//             jComboBox2.getToolTipText("");
+//             jTextField8.getText("");
          }
          else{
              JOptionPane.showMessageDialog(this, "error found!!");
@@ -356,52 +363,58 @@ public class Doctor_details extends javax.swing.JFrame {
 
     private void NewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewActionPerformed
         // TODO add your handling code here:
-             jTextField9.setText("");
-             jTextField10.getText("");
-             jTextField12.getText("");
-             jTextField4.getText;("");
-             jTextField13.getText("");
-             jTextField6.getText("");
-             jTextField7.getText("");
-             jComboBox1.getToolTipText("");
-             jComboBox2.getToolTipText("");
-             jTextField8.getText("");
+//             jTextField9.setText("");
+//             jTextField10.setText("");
+//             jTextField12.setText("");
+//             jTextField4.setText;("");
+//             jTextField13.setText("");
+//             jTextField6.setText("");
+//             jTextField7.setText("");
+//             jComboBox1.getToolTipText("");
+//             jComboBox2.getToolTipText("");
+//             jTextField8.getText("");
         
     }//GEN-LAST:event_NewActionPerformed
 
     private void GetdataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GetdataActionPerformed
         // TODO add your handling code areStatment
-        db= con.prepareStatment("select doc_id,name,fath_name from table where doc_id=?");
-        int doc_id = Integer.parseInt(doc_id.getText());
-        db.setInt(1,doc_id);
-        ResultSet a =db.executeQuery();
-        if(a.next()==false){
-             JOptionPane.showMessageDialog(this, "not found!!");
-          jTextField9.setText("");
-             jTextField10.getText("");
-             jTextField12.getText("");
-             jTextField4.getText;("");
-             jTextField13.getText("");
-             jTextField6.getText("");
-             jTextField7.getText("");
-             jComboBox1.getToolTipText("");
-             jComboBox2.getToolTipText("");
-             jTextField8.getText("");    
-        }
-        else{
-            jTextField9.setText(a.getString("doc_id"));
-             jTextField10.setText(a.getString("name"));
-             jTextField12.setText(a.getString("fath_name"));
-             jTextField4.setText(a.getString("mail"));
-             jTextField13.setText(a.getString("contact"));
-             jTextField6.setText(a.getString("add"));
-             jTextField7.setText(a.getString("qualif"));
-             jComboBox1.setText(a.getString("gender"));
-             jComboBox2.setText(a.getString("blood"));
-             jTextField8.setText(a.getString("joining"));
-            
-        }
+//        db= con.prepareStatment("select doc_id,name,fath_name from table where doc_id=?");
+//        int doc_id = Integer.parseInt(doc_id.getText());
+//        db.setInt(1,doc_id);
+//        ResultSet a =db.executeQuery();
+//        if(a.next()==false){
+//             JOptionPane.showMessageDialog(this, "not found!!");
+//          jTextField9.setText("");
+//             jTextField10.setText("");
+//             jTextField12.setText("");
+//             jTextField4.setText;("");
+//             jTextField13.setText("");
+//             jTextField6.setText("");
+//             jTextField7.setText("");
+//             jComboBox1.getToolTipText("");
+//             jComboBox2.getToolTipText("");
+//             jTextField8.setText("");    
+//        }
+//        else{
+//            jTextField9.setText(a.getString("doc_id"));
+//             jTextField10.setText(a.getString("name"));
+//             jTextField12.setText(a.getString("fath_name"));
+//             jTextField4.setText(a.getString("mail"));
+//             jTextField13.setText(a.getString("contact"));
+//             jTextField6.setText(a.getString("add"));
+//             jTextField7.setText(a.getString("qualif"));
+//             jComboBox1.setText(a.getString("gender"));
+//             jComboBox2.setText(a.getString("blood"));
+//             jTextField8.setText(a.getString("joining"));
+//            
+//        }
     }//GEN-LAST:event_GetdataActionPerformed
+
+    private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
+
+
+      
+    }//GEN-LAST:event_UpdateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -437,7 +450,7 @@ public class Doctor_details extends javax.swing.JFrame {
             }
         });
     }
-
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Delete;
     private javax.swing.JButton Getdata;

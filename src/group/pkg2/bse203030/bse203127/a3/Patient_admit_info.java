@@ -296,6 +296,9 @@ public class Patient_admit_info extends javax.swing.JFrame {
         String doc_id = jTextField7.getText();
         String doc_name=jTextField8.getText();
         String remarks=jTextField9.getText();
+         service_info frame=new service_info();
+              frame.setVisible(true);
+              dispose();
     }//GEN-LAST:event_SaveActionPerformed
 
     private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
@@ -326,39 +329,39 @@ public class Patient_admit_info extends javax.swing.JFrame {
 
     private void GetdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GetdateActionPerformed
         // TODO add your handling code here:
-         db= con.prepareStatment("select pat_id,name,fath_name from table where pat_id=?");
-        int pat_id = Integer.parseInt(pat_id.getText());
-        db.setInt(1,pat_id);
-        ResultSet a =db.executeQuery();
-        if(a.next()==false){
-             JOptionPane.showMessageDialog(this, "not found!!");
-          jTextField1.setText("");
-             jTextField2.setText("");
-             jTextField3.setText("");
-             jTextField4.setText("");
-             jTextField5.setText("");
-             jTextField6.setText("");
-             jTextField7.setText("");
-             jComboBox1.setToolTipText("");
-             jTextField8.setText("");
-             jTextField9.setText("");
-             
-        }
-        else{
-            jTextField1.setText(a.getString("pat_id"));
-             jTextField2.setText(a.getString("name"));
-             jTextField3.setText(a.getString("gender"));
-             jTextField4.setText(a.getString("blood"));
-             jTextField5.setText(a.getString("diseses"));
-             jTextField6.setText(a.getString("admit"));
-             
-             jComboBox1.setText(a.getString("room_no"));
-             jTextField7.setText(a.getString("doc_id"));
-             jTextField8.setText(a.getString("doc_name"));
-             jTextField9.setText(a.getString("remark"));
-             
-            
-        }
+//         db= con.prepareStatment("select pat_id,name,fath_name from table where pat_id=?");
+//        int pat_id = Integer.parseInt(pat_id.getText());
+//        db.setInt(1,pat_id);
+//        ResultSet a =db.executeQuery();
+//        if(a.next()==false){
+//             JOptionPane.showMessageDialog(this, "not found!!");
+//          jTextField1.setText("");
+//             jTextField2.setText("");
+//             jTextField3.setText("");
+//             jTextField4.setText("");
+//             jTextField5.setText("");
+//             jTextField6.setText("");
+//             jTextField7.setText("");
+//             jComboBox1.setToolTipText("");
+//             jTextField8.setText("");
+//             jTextField9.setText("");
+//             
+//        }
+//        else{
+//            jTextField1.setText(a.getString("pat_id"));
+//             jTextField2.setText(a.getString("name"));
+//             jTextField3.setText(a.getString("gender"));
+//             jTextField4.setText(a.getString("blood"));
+//             jTextField5.setText(a.getString("diseses"));
+//             jTextField6.setText(a.getString("admit"));
+//             
+//             jComboBox1.setText(a.getString("room_no"));
+//             jTextField7.setText(a.getString("doc_id"));
+//             jTextField8.setText(a.getString("doc_name"));
+//             jTextField9.setText(a.getString("remark"));
+//             
+//            
+//        }
     }//GEN-LAST:event_GetdateActionPerformed
 
     /**

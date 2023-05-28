@@ -264,28 +264,28 @@ public class service_info extends javax.swing.JFrame {
 
     private void GetdataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GetdataActionPerformed
         // TODO add your handling code here:
-        db= con.prepareStatment("select pat_id,name from table where pat_id=?");
-        int pat_id = Integer.parseInt(pat_id.getText());
-        db.setInt(1,pat_id);
-        ResultSet a =db.executeQuery();
-        if(a.next()==false){
-             JOptionPane.showMessageDialog(this, "not found!!");
-          jTextField1.setText("");
-             jTextField2.setText("");
-             jTextField3.setText("");
-             jTextField4.setText("");
-             jTextField5.setText("");
-        }
-        else{
-            jTextField1.setText(a.getString("ser_name"));
-             jTextField2.setText(a.getString("ser_data"));
-             jTextField3.setText(a.getString("pat_id"));
-             jTextField4.setText(a.getString("pat_name"));
-             jTextField5.setText(a.getString("ser_charg"));
-             
-             
-            
-        }
+//        db= con.prepareStatment("select pat_id,name from table where pat_id=?");
+//        int pat_id = Integer.parseInt(pat_id.getText());
+//        db.setInt(1,pat_id);
+//        ResultSet a =db.executeQuery();
+//        if(a.next()==false){
+//             JOptionPane.showMessageDialog(this, "not found!!");
+//          jTextField1.setText("");
+//             jTextField2.setText("");
+//             jTextField3.setText("");
+//             jTextField4.setText("");
+//             jTextField5.setText("");
+//        }
+//        else{
+//            jTextField1.setText(a.getString("ser_name"));
+//             jTextField2.setText(a.getString("ser_data"));
+//             jTextField3.setText(a.getString("pat_id"));
+//             jTextField4.setText(a.getString("pat_name"));
+//             jTextField5.setText(a.getString("ser_charg"));
+//             
+//             
+//            
+//        }
     }//GEN-LAST:event_GetdataActionPerformed
 
     /**

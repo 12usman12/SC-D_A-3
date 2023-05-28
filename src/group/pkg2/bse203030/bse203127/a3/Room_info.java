@@ -223,6 +223,9 @@ public class Room_info extends javax.swing.JFrame {
         String id= jTextField1.getText();
         String type=jTextField2.getText();
         String charges=jComboBox1.getToolTipText();
+         patient_details frame=new patient_details();
+              frame.setVisible(true);
+              dispose();
         
     }//GEN-LAST:event_SaveActionPerformed
 
@@ -246,23 +249,23 @@ public class Room_info extends javax.swing.JFrame {
 
     private void GetDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GetDataActionPerformed
         // TODO add your handling code here:
-         db= con.prepareStatment("select id,type,charges from table where doc_id=?");
-        int id = Integer.parseInt(id.getText());
-        db.setInt(1,id);
-        ResultSet a =db.executeQuery();
-        if(a.next()==false){
-             JOptionPane.showMessageDialog(this, "not found!!");
-             jTextField1.getText();
-             jTextField2.getText();
-             jComboBox1.getToolTipText();
-               
-        }
-        else{
-             jTextField1.setText(a.getString("id"));
-             jTextField2.setText(a.getString("charges"));
-             jComboBox1.setText(a.getString("type"));
-            
-        }
+//         db= con.prepareStatment("select id,type,charges from table where doc_id=?");
+//        int id = Integer.parseInt(id.getText());
+//        db.setInt(1,id);
+//        ResultSet a =db.executeQuery();
+//        if(a.next()==false){
+//             JOptionPane.showMessageDialog(this, "not found!!");
+//             jTextField1.getText();
+//             jTextField2.getText();
+//             jComboBox1.getToolTipText();
+//               
+//        }
+//        else{
+//             jTextField1.setText(a.getString("id"));
+//             jTextField2.setText(a.getString("charges"));
+//             jComboBox1.setText(a.getString("type"));
+//            
+//        }
     }//GEN-LAST:event_GetDataActionPerformed
 
     /**

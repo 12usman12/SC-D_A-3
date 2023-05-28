@@ -289,6 +289,9 @@ public class patient_details extends javax.swing.JFrame {
         String gender = jComboBox1.getToolTipText();
         String blood = jComboBox2.getToolTipText();
         String info=jTextField7.getText();
+        Patient_admit_info frame=new Patient_admit_info();
+              frame.setVisible(true);
+              dispose();
     }//GEN-LAST:event_SaveActionPerformed
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
@@ -315,36 +318,36 @@ public class patient_details extends javax.swing.JFrame {
 
     private void GetdataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GetdataActionPerformed
         // TODO add your handling code here:
-         db= con.prepareStatment("select pat_id,name,fath_name from table where pat_id=?");
-        int pat_id = Integer.parseInt(doc_id.getText());
-        db.setInt(1,pat_id);
-        ResultSet a =db.executeQuery();
-        if(a.next()==false){
-             JOptionPane.showMessageDialog(this, "not found!!");
-          jTextField1.setText("");
-             jTextField2.setText("");
-             jTextField3.setText("");
-             jTextField4.setText;("");
-             jTextField5.setText("");
-             jTextField6.setText("");
-             jTextField7.setText("");
-             jComboBox1.setToolTipText("");
-             jComboBox2.setToolTipText("");
-             
-        }
-        else{
-            jTextField1.setText(a.getString("pat_id"));
-             jTextField2.setText(a.getString("name"));
-             jTextField3.setText(a.getString("fath_name"));
-             jTextField4.setText(a.getString("mail"));
-             jTextField5.setText(a.getString("age"));
-             jTextField6.setText(a.getString("add"));
-             
-             jComboBox1.setText(a.getString("gender"));
-             jComboBox2.setText(a.getString("blood"));
-             jTextField7.setText(a.getString("info"));
-            
-        }
+//         db= con.prepareStatment("select pat_id,name,fath_name from table where pat_id=?");
+//        int pat_id = Integer.parseInt(doc_id.getText());
+//        db.setInt(1,pat_id);
+//        ResultSet a =db.executeQuery();
+//        if(a.next()==false){
+//             JOptionPane.showMessageDialog(this, "not found!!");
+//          jTextField1.setText("");
+//             jTextField2.setText("");
+//             jTextField3.setText("");
+//             jTextField4.setText;("");
+//             jTextField5.setText("");
+//             jTextField6.setText("");
+//             jTextField7.setText("");
+//             jComboBox1.setToolTipText("");
+//             jComboBox2.setToolTipText("");
+//             
+//        }
+//        else{
+//            jTextField1.setText(a.getString("pat_id"));
+//             jTextField2.setText(a.getString("name"));
+//             jTextField3.setText(a.getString("fath_name"));
+//             jTextField4.setText(a.getString("mail"));
+//             jTextField5.setText(a.getString("age"));
+//             jTextField6.setText(a.getString("add"));
+//             
+//             jComboBox1.setText(a.getString("gender"));
+//             jComboBox2.setText(a.getString("blood"));
+//             jTextField7.setText(a.getString("info"));
+//            
+//        }
     }//GEN-LAST:event_GetdataActionPerformed
 
     /**

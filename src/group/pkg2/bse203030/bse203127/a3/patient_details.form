@@ -76,7 +76,7 @@
                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel8" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jLabel9" alignment="0" pref="80" max="32767" attributes="0"/>
+                      <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabel10" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
