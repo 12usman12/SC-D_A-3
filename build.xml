@@ -55,7 +55,7 @@
       run:                      execution of project 
       -javadoc-build:           Javadoc generation
       test-report:              JUnit report generation
- 6crU3z9cDG
+
     An example of overriding the target for project execution could look like this:
 
         <target name="run" depends="Group-2-BSE203030-BSE203127-A3.-impl.jar">
